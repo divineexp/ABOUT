@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — The Divine Experience Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff;
+  --page:#f8f7f5;
+  --border:#e4e2de;
+  --border-dk:#ceccc7;
+  --text:#0f0f0f;
+  --text-sec:#58554f;
+  --text-hint:#8f8b85;
+  --accent:#0a6b52;
+  --accent-lt:#e6f4f0;
+  --ga:#4fc3f7;
+  --gb:#26e5a0;
+  --gc:#a8ff3e;
+  --dark:#0c110e;
+  --sp:5rem;
+  --hp:4rem;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--page);color:var(--text);font-family:'DM Sans',sans-serif;font-size:17px;line-height:1.7;overflow-x:hidden;}
+
+.gt{background:linear-gradient(90deg,var(--ga),var(--gb),var(--gc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+.eyebrow{font-size:14px;letter-spacing:0.34em;text-transform:uppercase;color:var(--text-hint);margin-bottom:1.4rem;display:flex;align-items:center;gap:16px;font-weight:400;}
+.eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:var(--border-dk);}
+.eyebrow-light{font-size:14px;letter-spacing:0.34em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1.4rem;display:flex;align-items:center;gap:16px;}
+.eyebrow-light::before{content:'';display:inline-block;width:32px;height:1px;background:rgba(255,255,255,0.14);}
+
+.sec-h{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,5.5vw,66px);letter-spacing:0.02em;line-height:0.92;color:var(--text);margin-bottom:1.4rem;}
+.sec-h-light{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,5.5vw,66px);letter-spacing:0.02em;line-height:0.92;color:#fff;margin-bottom:1.4rem;}
+.sec-b{font-size:16px;color:var(--text-sec);line-height:2;max-width:580px;margin-bottom:2.5rem;}
+.sec-b-light{font-size:16px;color:rgba(255,255,255,0.42);line-height:2;max-width:580px;margin-bottom:2.5rem;}
+
+.btn-primary{display:inline-block;font-size:13px;letter-spacing:0.2em;text-transform:uppercase;font-weight:500;padding:17px 44px;border-radius:2px;text-decoration:none;color:#0a0a0a;background:linear-gradient(90deg,var(--ga),var(--gc));transition:opacity .2s;}
+.btn-primary:hover{opacity:0.86;}
+.btn-outline-light{display:inline-block;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;padding:16px 38px;border-radius:2px;text-decoration:none;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.18);transition:all .2s;}
+.btn-outline-light:hover{border-color:rgba(255,255,255,0.4);color:#fff;}
+
+/* ── HERO ── */
+.hero{background:var(--white);padding:6rem var(--hp) 0;border-bottom:1px solid var(--border);}
+.hero-inner{max-width:1280px;margin:0 auto;}
+
+.hero-top{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem;}
+.hero-logo{height:52px;width:auto;display:block;}
+.hero-agency-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.1em;color:var(--text-hint);}
+
+.hero-headline{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,9vw,128px);line-height:0.88;letter-spacing:0.01em;color:var(--text);margin-bottom:3rem;max-width:980px;}
+.hero-headline em{font-family:'DM Serif Display',serif;font-style:italic;}
+
+.hero-sub-row{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;padding-bottom:4rem;}
+.hero-sub-row p{font-size:18px;color:var(--text-sec);line-height:1.95;max-width:520px;}
+
+.hero-stats{display:flex;flex-direction:column;border-top:1px solid var(--border);}
+.hs-item{padding:1.1rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:72px 1fr;gap:1.5rem;align-items:baseline;}
+.hs-num{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:0.02em;line-height:1;background:linear-gradient(90deg,var(--ga),var(--gc));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hs-label{font-size:14px;color:var(--text-hint);line-height:1.5;}
+
+/* ── BACKGROUND ── */
+.story{padding:var(--sp) var(--hp);background:var(--page);}
+.story-inner{max-width:1280px;margin:0 auto;}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;}
+.story-pull{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(22px,2.8vw,34px);line-height:1.4;color:var(--text);margin-bottom:2rem;max-width:460px;}
+.story-body{font-size:16px;color:var(--text-sec);line-height:2;}
+.story-body p{margin-bottom:1.4rem;}
+.story-body p:last-child{margin-bottom:0;}
+
+.timeline{display:flex;flex-direction:column;border-top:1px solid var(--border);}
+.tl-item{padding:1.75rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:76px 1fr;gap:1.5rem;align-items:start;}
+.tl-year{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.18em;color:var(--text-hint);padding-top:4px;text-transform:uppercase;}
+.tl-content strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.04em;color:var(--text);margin-bottom:0.4rem;}
+.tl-content p{font-size:15px;color:var(--text-sec);line-height:1.85;}
+
+/* ── VISION ── */
+.vision{padding:var(--sp) var(--hp);background:var(--dark);position:relative;overflow:hidden;}
+.vision::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(79,195,247,0.06) 0%,transparent 65%);pointer-events:none;}
+.vision::after{content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(168,255,62,0.04) 0%,transparent 65%);pointer-events:none;}
+.vision-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1;}
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;}
+.vision-left{}
+.vision-logo{height:80px;width:auto;margin-bottom:2rem;opacity:0.6;}
+.vision-statement{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(24px,3.2vw,40px);line-height:1.35;color:#fff;}
+.vision-body{font-size:16px;color:rgba(255,255,255,0.45);line-height:2;}
+.vision-body p{margin-bottom:1.4rem;}
+.vision-body p:last-child{margin-bottom:0;}
+
+/* ── VALUES ── */
+.values{padding:var(--sp) var(--hp);background:var(--white);border-top:1px solid var(--border);}
+.values-inner{max-width:1280px;margin:0 auto;}
+.values-header{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border);}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border);}
+.val-card{background:var(--white);padding:2.25rem 2rem;}
+.val-rule{width:28px;height:2px;background:var(--accent);margin-bottom:1.5rem;}
+.val-name{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:0.05em;margin-bottom:0.75rem;}
+.val-desc{font-size:14px;color:var(--text-sec);line-height:1.9;}
+
+/* ── TEAM ── */
+.team{padding:var(--sp) var(--hp);background:var(--page);border-top:1px solid var(--border);}
+.team-inner{max-width:1280px;margin:0 auto;}
+.team-header{margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border);}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--border);}
+.founder-card{background:var(--page);padding:2.75rem 2.5rem;}
+
+.founder-photo{
+  width:100%;aspect-ratio:4/3;background:var(--dark);
+  margin-bottom:2rem;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;
+}
+.founder-photo img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:top center;
+  display:block;
+}
+/* gradient overlay so name reads over photo */
+.founder-photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.5) 0%,transparent 55%);
+  z-index:1;
+}
+.founder-photo-label{
+  position:relative;z-index:2;
+  padding:1.25rem 1.5rem;width:100%;
+}
+.fpl-name{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:rgba(255,255,255,0.55);text-transform:uppercase;}
+
+.founder-eyebrow{font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-hint);margin-bottom:0.6rem;}
+.founder-name{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:0.02em;line-height:1;margin-bottom:0.3rem;}
+.founder-title{font-size:13px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-hint);margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:1px solid var(--border);}
+.founder-bio{font-size:15px;color:var(--text-sec);line-height:1.95;margin-bottom:1.4rem;}
+.founder-bio:last-of-type{margin-bottom:1.75rem;}
+.founder-tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.founder-tag{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;padding:5px 12px;border-radius:2px;color:var(--accent);background:var(--accent-lt);}
+
+/* ── APPROACH ── */
+.approach{padding:var(--sp) var(--hp);background:var(--white);border-top:1px solid var(--border);}
+.approach-inner{max-width:1280px;margin:0 auto;}
+.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;}
+.approach-pull{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(22px,2.8vw,34px);line-height:1.4;color:var(--text);margin-bottom:2rem;}
+.approach-body{font-size:16px;color:var(--text-sec);line-height:2;}
+.approach-body p{margin-bottom:1.4rem;}
+.approach-body p:last-child{margin-bottom:0;}
+.approach-pillars{display:flex;flex-direction:column;border-top:1px solid var(--border);}
+.ap-item{padding:1.5rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:36px 1fr;gap:1.25rem;align-items:start;}
+.ap-num{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.12em;color:var(--text-hint);padding-top:4px;}
+.ap-text strong{display:block;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.04em;margin-bottom:0.35rem;}
+.ap-text p{font-size:14px;color:var(--text-sec);line-height:1.85;}
+
+/* ── CTA ── */
+.cta{background:var(--dark);padding:var(--sp) var(--hp);position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;top:-150px;right:-150px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(79,195,247,0.06) 0%,transparent 65%);pointer-events:none;}
+.cta-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;position:relative;z-index:1;}
+.cta-eyebrow{font-size:14px;letter-spacing:0.34em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1.4rem;display:flex;align-items:center;gap:16px;}
+.cta-eyebrow::before{content:'';display:inline-block;width:32px;height:1px;background:rgba(255,255,255,0.14);}
+.cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,80px);letter-spacing:0.02em;line-height:0.9;color:#fff;margin-bottom:1.25rem;}
+.cta h2 em{font-family:'DM Serif Display',serif;font-style:italic;}
+.cta-sub{font-size:16px;color:rgba(255,255,255,0.38);line-height:1.95;}
+.cta-right{display:flex;flex-direction:column;gap:1.25rem;align-items:flex-start;}
+.cta-right p{font-size:15px;color:rgba(255,255,255,0.32);line-height:1.85;}
+.cta-actions{display:flex;gap:1.25rem;flex-wrap:wrap;}
+
+/* ── FOOTER ── */
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,0.06);padding:2.25rem var(--hp);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+.footer-logo{height:28px;width:auto;opacity:0.4;filter:brightness(10);}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.2);letter-spacing:0.07em;}
+.footer-links{display:flex;gap:3rem;}
+.footer-links a{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.25);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:rgba(255,255,255,0.72);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .values-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:860px){
+  :root{--hp:2.5rem;--sp:4rem;}
+  .hero-sub-row,.story-grid,.vision-grid,.approach-grid,.cta-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .team-grid{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:1fr 1fr;}
+  footer{padding:1.75rem 2.5rem;flex-direction:column;align-items:flex-start;gap:1.25rem;}
+  .footer-links{gap:1.5rem;}
+}
+@media(max-width:600px){
+  :root{--sp:3rem;--hp:1.5rem;}
+  .hero{padding-top:4rem;}
+  .hero-headline{font-size:clamp(44px,13vw,90px);}
+  .sec-h,.sec-h-light{font-size:clamp(36px,9vw,56px);}
+  .values-grid{grid-template-columns:1fr;}
+  .cta-actions{flex-direction:column;align-items:stretch;}
+  .cta-actions a{text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="hero-top">
+      <!--
+        LOGO PATH: assets/TDE_ISOTYPE.png
+        Place TDE_ISOTYPE.png in your /assets/ folder in GitHub.
+        The file name must match exactly.
+      -->
+      <img src="assets/TDE_ISOTYPE.png" alt="The Divine Experience Agency" class="hero-logo">
+      <span class="hero-agency-name">The Divine Experience Agency</span>
+    </div>
+
+    <h1 class="hero-headline">
+      Serving With<br>
+      <em>Purpose &amp; Precision.</em>
+    </h1>
+
+    <div class="hero-sub-row">
+      <p>We are a boutique creative agency built on the conviction that exceptional professionals deserve a digital presence that reflects what they actually deliver. That belief has guided every project, every client relationship, and every result since day one.</p>
+      <div class="hero-stats">
+        <div class="hs-item">
+          <div class="hs-num">2023</div>
+          <div class="hs-label">Founded as a full-scale creative agency</div>
+        </div>
+        <div class="hs-item">
+          <div class="hs-num">10+</div>
+          <div class="hs-label">Combined years in design, media, and creative direction</div>
+        </div>
+        <div class="hs-item">
+          <div class="hs-num">100%</div>
+          <div class="hs-label">Client-first on every engagement, without exception</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ OUR BACKGROUND ══════════ -->
+<section class="story" id="background">
+  <div class="story-inner">
+    <div class="story-grid">
+      <div>
+        <div class="eyebrow">Our Background</div>
+        <p class="story-pull">We started by extending a helping hand. Everything we've built since has been an extension of that.</p>
+        <div class="story-body">
+          <p>Our journey began as a media company. During the pandemic, we stepped in to help nonprofits and others in need — connecting organizations with the people they served when that connection mattered most.</p>
+          <p>Service has always been our core intent. As creatives, design came naturally. One project became the next — websites, business cards, business launches — and our work expanded alongside our clients' needs.</p>
+          <p>Our education and extensive background in creativity, media, and understanding people form the foundation of everything we do today. We don't just design — we listen, we understand, and we build with intention.</p>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">Our Journey</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">Year 01</div>
+            <div class="tl-content">
+              <strong>Where It Started</strong>
+              <p>We began helping nonprofits with their media needs — fostering connections with their patrons and communities at a time when that work was needed most.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Year 02</div>
+            <div class="tl-content">
+              <strong>Growing With Our Clients</strong>
+              <p>Our clientele expanded and we added more services. Websites, branding, business launches — each one an act of service, each one sharpening our craft.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Year 03</div>
+            <div class="tl-content">
+              <strong>Full Scale</strong>
+              <p>We transitioned to full-time and turned DVX into a full-scale creative agency — formalizing our process, deepening our focus, and committing completely to the work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OUR VISION ══════════ -->
+<section class="vision" id="vision">
+  <div class="vision-inner">
+    <div class="vision-grid">
+      <div class="vision-left">
+        <div class="eyebrow-light">Our Vision</div>
+        <!--
+          LOGO ON DARK BACKGROUND
+          Same file — works because PNG has a transparent background.
+        -->
+        <img src="assets/TDE_ISOTYPE.png" alt="The Divine Experience Agency" class="vision-logo">
+        <p class="vision-statement">"To create experiences so precise and purposeful that every client's business is transformed by the way it shows up in the world."</p>
+      </div>
+      <div class="vision-body">
+        <p>We approach every project with a creative and forward-thinking mindset. We don't execute briefs passively — we engage with the purpose behind the work and design toward the outcome your business actually needs.</p>
+        <p>Every client and their business are unique. That's not a talking point for us — it shapes how we start every engagement, how we involve you throughout the process, and how we define whether the work succeeded.</p>
+        <p>Vision is the fuel that propels us forward. We believe in the power of purpose, and we bring that belief into every project we take on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OUR VALUES ══════════ -->
+<section class="values" id="values">
+  <div class="values-inner">
+    <div class="values-header">
+      <div class="eyebrow">Our Values</div>
+      <h2 class="sec-h">What We Stand On</h2>
+    </div>
+    <div class="values-grid">
+      <div class="val-card">
+        <div class="val-rule"></div>
+        <div class="val-name">Service</div>
+        <p class="val-desc">We prioritize the needs of our clients — going above and beyond to deliver unforgettable experiences and results. Our team is driven by a genuine desire to serve and support you at every step of your journey.</p>
+      </div>
+      <div class="val-card">
+        <div class="val-rule"></div>
+        <div class="val-name">Integrity</div>
+        <p class="val-desc">Integrity is the cornerstone of our business philosophy. Transparency, honesty, and ethical practice in every interaction. Trust is essential in building meaningful relationships — and we uphold the highest standards in everything we do.</p>
+      </div>
+      <div class="val-card">
+        <div class="val-rule"></div>
+        <div class="val-name">Vision</div>
+        <p class="val-desc">We approach every project with a creative and forward-thinking mindset — seeking innovative solutions that bring your ideas to life in ways that resonate with your audience and drive results that last.</p>
+      </div>
+      <div class="val-card">
+        <div class="val-rule"></div>
+        <div class="val-name">Faith</div>
+        <p class="val-desc">Faith is the guiding force behind our agency. We believe in the power of purpose and divine inspiration. Trusting in our abilities and the greater purpose behind each project fuels our passion for creating meaningful work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MEET THE TEAM ══════════ -->
+<section class="team" id="team">
+  <div class="team-inner">
+    <div class="team-header">
+      <div class="eyebrow">Meet the Team</div>
+      <h2 class="sec-h">The People Behind the Work</h2>
+    </div>
+    <div class="team-grid">
+
+      <!-- QUANTE' -->
+      <div class="founder-card">
+        <div class="founder-photo">
+          <!--
+            PHOTO PATH: assets/quante-reid.png
+            Place headshot in /assets/ folder in GitHub.
+            Recommended: square or portrait crop, 800px+ wide.
+          -->
+          <img src="assets/quante-reid.png" alt="Quante' Reid — Co-Founder, Creative Director">
+          <div class="founder-photo-overlay"></div>
+          <div class="founder-photo-label">
+            <div class="fpl-name">Quante' Reid</div>
+          </div>
+        </div>
+        <div class="founder-eyebrow">Co-Founder</div>
+        <div class="founder-name">Quante' Reid</div>
+        <div class="founder-title">Creative Director</div>
+        <p class="founder-bio">Meet Quante' Reid, co-founder of The Divine Experience. With almost 8 years of experience in the creative arts and design field, she is a visionary creative director who brings ideas to life.</p>
+        <p class="founder-bio">A true renaissance woman, Quante's brilliance and creativity shine through in every project she touches. She has a unique ability to connect with clients on a personal level — ensuring that their visions are not only realized, but surpassed with unparalleled creativity and dedication.</p>
+        <div class="founder-tags">
+          <span class="founder-tag">Creative Direction</span>
+          <span class="founder-tag">Design</span>
+          <span class="founder-tag">Client Experience</span>
+        </div>
+      </div>
+
+      <!-- TIAUNA -->
+      <div class="founder-card">
+        <div class="founder-photo">
+          <!--
+            PHOTO PATH: assets/tiauna-hall.png
+            Place headshot in /assets/ folder in GitHub.
+            Recommended: square or portrait crop, 800px+ wide.
+          -->
+          <img src="assets/tiauna-hall.png" alt="Tiauna Jasmine Hall — Co-Founder, Creative Operations">
+          <div class="founder-photo-overlay"></div>
+          <div class="founder-photo-label">
+            <div class="fpl-name">Tiauna Jasmine Hall</div>
+          </div>
+        </div>
+        <div class="founder-eyebrow">Co-Founder</div>
+        <div class="founder-name">Tiauna Jasmine Hall</div>
+        <div class="founder-title">Creative Operations, Marketing &amp; Copy</div>
+        <p class="founder-bio">Tiauna Jasmine Hall leads creative operations, marketing, and copy across every TDE engagement. Her background spans nearly a decade in media direction, content strategy, and brand communication.</p>
+        <p class="founder-bio">She brings both the systems thinking and the storytelling instinct that keep every project on track and every deliverable on message — ensuring what gets built is not only well-designed, but precisely communicated.</p>
+        <div class="founder-tags">
+          <span class="founder-tag">Creative Operations</span>
+          <span class="founder-tag">Marketing</span>
+          <span class="founder-tag">Copy</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ OUR APPROACH ══════════ -->
+<section class="approach" id="approach">
+  <div class="approach-inner">
+    <div class="approach-grid">
+      <div>
+        <div class="eyebrow">Our Approach</div>
+        <p class="approach-pull">We believe every client and their business are unique — which is why we begin by actively listening.</p>
+        <div class="approach-body">
+          <p>Throughout the creative journey, we ensure our clients are actively involved. Your input isn't just welcomed — it is essential to how we build. Our team prioritizes every project, treating each client with the utmost importance and respect.</p>
+          <p>Your success is our ultimate goal. We are committed to delivering design solutions that represent your brand and help you supersede your business goals.</p>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">How We Work</div>
+        <div class="approach-pillars">
+          <div class="ap-item">
+            <div class="ap-num">01</div>
+            <div class="ap-text">
+              <strong>We Listen First</strong>
+              <p>Every engagement begins with active listening. We ask the right questions, understand your specific needs, and establish a clear picture of what success looks like before any work begins.</p>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-num">02</div>
+            <div class="ap-text">
+              <strong>You Stay Involved</strong>
+              <p>We ensure clients are actively involved throughout the creative process. Collaboration is not a formality — it is how we build work that truly represents you.</p>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-num">03</div>
+            <div class="ap-text">
+              <strong>We Deliver With Intention</strong>
+              <p>Every deliverable is designed to represent your brand at its highest level — and to move you beyond the goals you came in with.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section class="cta">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-eyebrow">Work With Us</div>
+      <h2>Let's Build<br><em>Something Together.</em></h2>
+      <p class="cta-sub">Schedule a complimentary 20-minute discovery call. Bring your goals, your questions, and your vision — we will take it from there.</p>
+    </div>
+    <div class="cta-right">
+      <p>Every engagement begins with a conversation. We respond within 24 – 48 hours.</p>
+      <div class="cta-actions">
+        <a href="https://dvxagency.youcanbook.me" target="_blank" class="btn-primary">Schedule a Discovery Call</a>
+        <a href="website-design.html" class="btn-outline-light">View Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <img src="assets/TDE_ISOTYPE.png" alt="The Divine Experience Agency" class="footer-logo">
+  <div class="footer-copy">© The Divine Experience 2026. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="website-design.html">Website Design</a>
+    <a href="presentation-design.html">Presentation Design</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
